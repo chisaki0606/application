@@ -29,4 +29,10 @@ class UsersController < ApplicationController
     @user.save
     redirect_to("/")
   end
+
+  def destroy
+    @user = User.find_by(id: params[:id])
+    @user.destroy
+    redirect_to("/")
+  end
 end
