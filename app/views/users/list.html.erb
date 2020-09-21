@@ -1,4 +1,7 @@
 <% @users.each do |user| %>
-  <%= user.name %>
-  <%= link_to("詳細", "/users/#{user.id}") %>
+  <div class="list-items">
+    <%= user.name %>
+    <%= link_to("詳細", "/users/#{user.id}") %>
+    <%= link_to("編集", "/users/#{user.id}/edit") %>  
+  </div>
 <% end %>
